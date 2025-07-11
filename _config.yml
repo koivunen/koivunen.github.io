@@ -1,0 +1,28 @@
+title: koivunen.work
+email: lauri@koivunen.work
+description: >- 
+  Anecdotes and work stories from a data janitor in academic software R&D with a hint of digital twins/IoT, hardware hacking and recycling. 
+baseurl: "" 
+url: "" 
+github_username:  koivunen
+
+#theme: minima
+remote_theme: "jekyll/minima@0b7ca6b"
+
+plugins:
+  - jekyll-feed
+
+minima:
+  date_format: "%Y-%m-%d"
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

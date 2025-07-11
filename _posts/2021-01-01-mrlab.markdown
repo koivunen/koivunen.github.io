@@ -1,0 +1,39 @@
+---
+layout: post
+title:  Video studio Automation
+categories: stories projects
+---
+
+**Audience:** home automation
+
+<video src="/assets/mrlab-startup.mp4" controls="controls" style="max-width: 730px;">
+</video>
+
+Working for software engineering lab we also film videos for educational purposes. For this a classroom was converted to a video studio. Being strongly against closed source solutions we decided to [Not Invented Here](https://en.wikipedia.org/wiki/Not_invented_here) the control systems.
+
+ - Home Assistant was chosen as the safe default platform
+ - An old desktop PC served as the base of operations, connected to both workstation network via ethernet and to IoT WiFi Access Point for controlling room devices.
+ - The Capture PC was linked via OBS Websockets and WOL and other control systems to HASS
+ - Video cameras and TVs were controlled via [Tasmota IR](https://tasmota.github.io/docs/Tasmota-IR/) and smart plugs.
+ - The room's Helvar lighting system also included IR control for automation. Otherwise access would not be given to helvar systems as it controls the whole building.
+ - DMX lights allow controlling lights to presets
+ - A NFC reader was linked for starting and stopping the system. Show keycard to start the system and long hold to shutdown.
+ - A common dashboard to control OBS was utilized
+ 
+## The good
+
+The automation did work as planned. 
+Room lights would dim, studio lights would turn on, TVs and cameras started along with OBS PC being ready to record. You just had to choose the right preset.
+
+## The bad
+
+As a "customer" if you walk into the room and know to present ID Tag, and then a bunch of things happen, you will still be lost on what to do next. 
+Naturally, editing the end result and also just having the files for teleprompter need to be done by someone. 
+This means help is still always needed. 
+Automating the rest in any way would be extremely time consuming. Therefore, we should probably have optimized for semi-automation initially, and not strive for full self-service.
+
+## The ugly
+
+As the space is expensive, it was designed to be dual-purpose with studio curtains being movable away and the space now usable for VR gear. 
+For VR the space appears to be actually rather usable, even with audience, but this means for studio mode you need to compromise on lights and camera positioning. Teleprompter also needs moving every time.
+
